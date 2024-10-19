@@ -16,4 +16,4 @@ rustup -V
 
 2: cd into the directory to which you have cloned this repository, enter the directory also called "same", and use the following command:
 cargo build
- to produce a binary at ./Target/debug/same .
+ to produce a binary at ./target/debug/same .
