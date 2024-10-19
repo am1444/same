@@ -1,9 +1,13 @@
 **Description**
+
 Test if two files have the same contents.
 
+
 **Syntax**
+
 same _file1_ _file2_
 Prints "equal" if the contents of _file1_ and contents of _file2_ are equal, or else it prints "not equal".
+
 
 **Compilation**
 
