@@ -6,6 +6,7 @@ same _file1_ _file2_
 Prints "equal" if the contents of _file1_ and contents of _file2_ are equal, or else it prints "not equal".
 
 **Compilation**
+
 1: Ensure you have some version of the Rust toolchain with the command:
 rustup -V
 
