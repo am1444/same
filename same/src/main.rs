@@ -1,12 +1,17 @@
 use std::fs;
 use std::env;
 use std::process::exit;
+use std::path::Path;
 
 fn check_exists(path:String) -> Vec<u8> {
+    let path_o = Path::new(&path);
     match fs::exists(path.clone()) {
         Ok(is_viable) => {
-            if is_viable {
+            if is_viable && path_o.metadata().unwrap().is_file(){
                 return fs::read(path.clone()).expect("Error loading file.");
+            } else if is_viable {
+                eprintln!("{} is a directory.",path);
+                exit(0);
             } else {
                 eprintln!("File {} does not exist.",path);
                 exit(0);
