@@ -29,6 +29,10 @@ fn main() {
     let clargs:Vec<String> = env::args().collect();
 
     if clargs.len() < 3 {
+        if clargs[1]=="-v".to_string() {
+            println!("same 1.0");
+            exit(0);
+        }
         eprintln!("Not enough arguments specified.");
         exit(0);
     }
