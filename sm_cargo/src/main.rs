@@ -31,7 +31,7 @@ fn main() {
     if clargs.len() < 3 {
         if clargs[1]=="-v".to_string() {
             println!("same 1.1");
-            exit(3);
+            exit(4);
         }
         eprintln!("Not enough arguments specified.");
         exit(4);
