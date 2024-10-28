@@ -11,16 +11,16 @@ fn check_exists(path:String) -> Vec<u8> {
                 return fs::read(path.clone()).expect("Error loading file.");
             } else if is_viable {
                 eprintln!("{} is a directory.",path);
-                exit(0);
+                exit(3);
             } else {
                 eprintln!("File {} does not exist.",path);
-                exit(0);
+                exit(3);
             }
         },
 
         Err(_) => {
             eprintln!("File {}'s existance can be neither confirmed nor denied.",path);
-            exit(0);
+            exit(3);
         }
     }
 }
@@ -30,11 +30,11 @@ fn main() {
 
     if clargs.len() < 3 {
         if clargs[1]=="-v".to_string() {
-            println!("same 1.0");
-            exit(0);
+            println!("same 1.1");
+            exit(3);
         }
         eprintln!("Not enough arguments specified.");
-        exit(0);
+        exit(4);
     }
 
     let data_a = check_exists(clargs[1].clone());
